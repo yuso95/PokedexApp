@@ -31,7 +31,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ros-Pv-8ai"/>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1lZ-LG-kxU">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1lZ-LG-kxU">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dLe-nJ-zCg">
                                     <size key="itemSize" width="120" height="80"/>
@@ -95,6 +95,9 @@
                             <constraint firstItem="1lZ-LG-kxU" firstAttribute="top" secondItem="tFt-me-3BU" secondAttribute="bottom" constant="20" id="yrR-7M-OXd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="1lZ-LG-kxU" id="MaK-Y4-U1e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

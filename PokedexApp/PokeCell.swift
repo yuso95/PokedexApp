@@ -22,4 +22,10 @@ class PokeCell: UICollectionViewCell {
         thumbIMG.image = UIImage(named: "\(self.pokemon.pokemonID)")
         nameLBL.text = self.pokemon.name
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        layer.cornerRadius = 5.0
+    }
 }
