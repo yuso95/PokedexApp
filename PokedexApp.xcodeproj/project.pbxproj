@@ -54,14 +54,46 @@
 		D5475B441E12BE5400D5173C /* PokedexApp */ = {
 			isa = PBXGroup;
 			children = (
-				D5475B451E12BE5400D5173C /* AppDelegate.swift */,
-				D5475B471E12BE5400D5173C /* ViewController.swift */,
 				D5475B491E12BE5400D5173C /* Main.storyboard */,
+				D5475B5A1E12BEA200D5173C /* Modal */,
+				D5475B591E12BE9C00D5173C /* View */,
+				D5475B581E12BE9300D5173C /* Controller */,
+				D5475B571E12BE8600D5173C /* Supporting Files */,
+			);
+			path = PokedexApp;
+			sourceTree = "<group>";
+		};
+		D5475B571E12BE8600D5173C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5475B451E12BE5400D5173C /* AppDelegate.swift */,
 				D5475B4C1E12BE5400D5173C /* Assets.xcassets */,
 				D5475B4E1E12BE5400D5173C /* LaunchScreen.storyboard */,
 				D5475B511E12BE5400D5173C /* Info.plist */,
 			);
-			path = PokedexApp;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D5475B581E12BE9300D5173C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5475B471E12BE5400D5173C /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D5475B591E12BE9C00D5173C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D5475B5A1E12BEA200D5173C /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
