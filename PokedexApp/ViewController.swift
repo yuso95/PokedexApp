@@ -99,9 +99,35 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let poke: Pokemon!
+        
+        if inSearchMode {
+            
+            poke = filteredPokemons[indexPath.row]
+        } else {
+            
+            poke = pokemons[indexPath.row]
+        }
+        
+        performSegue(withIdentifier: "toPokemonDetailVC", sender: poke)
+    }
+    
+    // Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toPokemonDetailVC" {
+            
+            if let destination = segue.destination as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    
+                    destination.poke = poke
+                }
+            }
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
