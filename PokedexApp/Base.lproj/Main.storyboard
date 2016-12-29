@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="pokemonFront.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,9 +24,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJr-Ze-rn2">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokeApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="SmR-rq-yFp">
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="SmR-rq-yFp" firstAttribute="leading" secondItem="qJr-Ze-rn2" secondAttribute="leading" constant="97" id="4KB-7K-aKQ"/>
+                                    <constraint firstItem="SmR-rq-yFp" firstAttribute="top" secondItem="qJr-Ze-rn2" secondAttribute="top" constant="8" id="E1f-nN-xeu"/>
+                                    <constraint firstAttribute="trailing" secondItem="SmR-rq-yFp" secondAttribute="trailing" constant="98" id="TRp-jZ-Ow4"/>
                                     <constraint firstAttribute="height" constant="65" id="nSM-7I-MOf"/>
+                                    <constraint firstAttribute="bottom" secondItem="SmR-rq-yFp" secondAttribute="bottom" constant="8" id="wTq-of-NjQ"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="tFt-me-3BU">
@@ -97,11 +113,12 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="1lZ-LG-kxU" id="MaK-Y4-U1e"/>
+                        <outlet property="searchBar" destination="tFt-me-3BU" id="pgd-Kd-puO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5" y="136.5"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.28185907046478"/>
         </scene>
     </scenes>
     <resources>
