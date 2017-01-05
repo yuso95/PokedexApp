@@ -11,7 +11,7 @@ import UIKit
 class PokemonDetailVC: UIViewController {
     
     // Var/Let/CP
-    var poke: Pokemon!
+    var pokemon: Pokemon!
 
     // Outlets
     
@@ -37,6 +37,20 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nameLBL.text = poke.name
+        nameLBL.text = pokemon.name.capitalized
+        
+        pokemon.downloadPokemonData {
+            
+            self.updateUI()
+        }
+    }
+    
+    func updateUI() {
+        
+        heightLBL.text = pokemon.height
+        weightLBL.text = pokemon.weight
+        attackLBL.text = pokemon.attack
+        defenseLBL.text = pokemon.defense
+        typeLBL.text = pokemon.type
     }
 }

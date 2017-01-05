@@ -121,9 +121,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if segue.identifier == "toPokemonDetailVC" {
             
             if let destination = segue.destination as? PokemonDetailVC {
-                if let poke = sender as? Pokemon {
+                if let pokemon = sender as? Pokemon {
                     
-                    destination.poke = poke
+                    destination.pokemon = pokemon
                 }
             }
         }
